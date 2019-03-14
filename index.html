@@ -1,0 +1,138 @@
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./ajax.js"></script>
+	<script type="text/javascript" src="./functions.js"></script>
+
+	<style>
+		.hide{
+			display: none;
+		}
+	</style>
+</head>
+<body id="main-content">
+	<div class="col-md-4">
+		<form id="searchForm" style="margin-top:10px;">
+			<p>Search by country, result, time...</p>
+			<input class="col-md-10" type="text" style="margin-bottom:10px;" id="search-bar">
+			<input type="Submit" id="submitBtn" class="btn btn-sm">
+		</form>
+	</div>
+	<div class="col-md-2" style="margin-top:40px;">
+		<form>
+			<button id="historyBtn" class="btn btn-info">History of searches</button>
+		</form>	
+	</div>
+	<table id="matches" class="col-md-9 table table-striped table-hover">
+		<th>Match</th>
+		<th>Guest Country</th>
+		<th>Home</th>
+		<th>Result</th>
+		<th>Winner</th>
+		<th>Time</th>
+		<th class="additional hide">Stadium</th>
+		<th class="additional hide">Venue</th>
+		<th class="additional hide">Weather</th>
+		<tbody id='matches-body'></tbody>
+	</table>	
+	<div class="hide" id="matchInfo">
+		<h3 style="text-align:center;">Match details</h3>
+		<div id='home-team' class="col-md-6">
+			<h4>Home team statistics</h4>
+			<div>
+				<table class="table table-striped table-hover">
+					<tr>
+						<th>Attempts on goal</th>
+						<td id="att-on-goal"></td>
+					</tr>
+					<tr>
+						<th>Centered</th>
+						<td id="centered"></td>
+					</tr>	
+					<tr>
+						<th>Corners</th>
+						<td id="corners"></td>
+					</tr>	
+					<tr>
+						<th>Ball possessions</th>
+						<td id="ball-possess"></td>
+					</tr>	
+					<tr>
+						<th>Pass accuracy</th>
+						<td id="pass-acc"></td>
+					</tr>
+					<tr>
+						<th>Red cards</th>
+						<td id="red-cards"></td>
+					</tr>
+					<tr>
+						<th>Yellow cards</th>
+						<td id="yellow-cards"></td>
+					</tr>
+				</table>	
+			</div>
+		</div>
+
+		<div class="col-md-6">
+			<h4>Home team players</h4>
+			<table class="table table-striped table-hover">
+				<th>Name</th>
+				<th>Number</th>
+				<th>Position</th>
+			<tbody id="home-players"></tbody>	
+			</table>		
+		</div>
+
+		<div id='guest-team' class="col-md-6">
+			<h4>Guest team statistics</h4>
+			<div>
+				<table class="table table-striped table-hover">
+					<tr>
+						<th>Attempts on goal</th>
+						<td id="att-on-goal-g"></td>
+					</tr>
+					<tr>
+						<th>Centered</th>
+						<td id="centered-g"></td>
+					</tr>	
+					<tr>
+						<th>Corners</th>
+						<td id="corners-g"></td>
+					</tr>	
+					<tr>
+						<th>Ball possessions</th>
+						<td id="ball-possess-g"></td>
+					</tr>	
+					<tr>
+						<th>Pass accuracy</th>
+						<td id="pass-acc-g"></td>
+					</tr>
+					<tr>
+						<th>Red cards</th>
+						<td id="red-cards-g"></td>
+					</tr>
+					<tr>
+						<th>Yellow cards</th>
+						<td id="yellow-cards-g"></td>
+					</tr>
+				</table>	
+			</div>
+		</div>
+
+		<div class="col-md-6">
+			<h4>Guest team players</h4>
+			<table class="table table-striped table-hover">
+				<th>Name</th>
+				<th>Number</th>
+				<th>Position</th>
+			<tbody id="guest-players"></tbody>	
+			</table>		
+		</div>
+
+	</div>	
+</body>
+</html>
