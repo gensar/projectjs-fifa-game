@@ -191,7 +191,7 @@ window.onload = function(){
 
 	//history of searches
 	getHistoryOfSearches = function(){
-		window.location.href="./pages/history.html";
+		window.location.href="./history.html";
 	}
 
 	document.getElementById("historyBtn").addEventListener("click", function(event){
